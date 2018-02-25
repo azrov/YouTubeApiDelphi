@@ -1,0 +1,40 @@
+object Main: TMain
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu]
+  BorderStyle = Single
+  Caption = 'App'
+  ClientHeight = 320
+  ClientWidth = 418
+  Position = ScreenCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Memo1: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    ReadOnly = True
+    Position.X = 8.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 401.000000000000000000
+    Size.Height = 273.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    TabStop = False
+    Viewport.Width = 397.000000000000000000
+    Viewport.Height = 269.000000000000000000
+  end
+  object Button1: TButton
+    Position.X = 8.000000000000000000
+    Position.Y = 288.000000000000000000
+    TabOrder = 1
+    TabStop = False
+    Text = 'Get'
+    OnClick = Button1Click
+  end
+  object YT: TazYouTubeApi
+    Left = 32
+    Top = 32
+  end
+end
