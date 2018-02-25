@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{F82F3F77-60AD-4B34-A542-33FF11341B00}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="azYouTubeApi.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="app\FMX\App.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="azYouTubeApi">
+        <MSBuild Projects="azYouTubeApi.dproj"/>
+    </Target>
+    <Target Name="azYouTubeApi:Clean">
+        <MSBuild Projects="azYouTubeApi.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="azYouTubeApi:Make">
+        <MSBuild Projects="azYouTubeApi.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="App">
+        <MSBuild Projects="app\FMX\App.dproj"/>
+    </Target>
+    <Target Name="App:Clean">
+        <MSBuild Projects="app\FMX\App.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="App:Make">
+        <MSBuild Projects="app\FMX\App.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="azYouTubeApi;App"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="azYouTubeApi:Clean;App:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="azYouTubeApi:Make;App:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

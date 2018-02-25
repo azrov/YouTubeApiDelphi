@@ -1,0 +1,33 @@
+YouTubeApi
+
+History
+
+--------------------------------------------------------------
+v1.4 - 25/02/2018
+  + Fix problems
+
+--------------------------------------------------------------
+v1.3 - 07/11/2016
+  + Fix problems
+  + Added DelphiDX(Berlin UP1)
+  + Added FireMonkey (macOS) platform
+
+--------------------------------------------------------------
+v1.2 - 16/02/2016
+  + Added DelphiDX(Seattle)
+  + Added FireMonkey platform
+  + Rebuild component
+  - Remove GetLinks function
+  - Remove Search function
+
+--------------------------------------------------------------
+v1.1 - 21/03/2014
+  + Added GetLinks function
+  + Added Search function
+
+--------------------------------------------------------------
+v1.0 - 12/03/2014
+  * The first release
+
+------------------------------------
+Copyright © 2010-2018 Ali Zairov
